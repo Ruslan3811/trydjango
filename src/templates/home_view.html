@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ my_name}}</h1>
+<h1>HOME</h1>
+<p1>This is a template</p1>
+{% endblock %}
+<p>{{ my_text }}, {{ my_name }}, {{ my_age }} </p>
+
+<h1>{% block second %}
+    <h1>Hello</h1>
+    <p>{{ my_text }}. </p>
+    <p>{{ my_name }}. {{ My_age }}. </p>
+
+    <ul>
+        {% for item in My_list %}
+        <li>
+            {% if item == 22 %}
+            {{item|add:7}}
+            {% elif item == "abc" %}
+            It is not networking
+            {% else %}
+            {{ item }}
+            {% endif %}</li>
+        {% endfor %}
+    </ul>
+</h1>
+{% endblock %}

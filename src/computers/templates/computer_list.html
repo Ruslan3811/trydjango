@@ -1,0 +1,5 @@
+{% for instance in object_list %}
+<p>
+    <a href="{{ instance.get_absolute_url }}">{{ instance.Name}} - {{ instance.Years_of_usage}} - {{instance.Price}}</a>
+</p>
+{% endfor %}
